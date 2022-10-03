@@ -1,11 +1,13 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import './style.css';
+import data from './data';
+import Questions from './Questions';
 
 export default function App() {
+  const [questions, setQuestions] = React.useState(data);
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+    <div className="main-container">
+      <Questions questions={questions} />
     </div>
   );
 }
